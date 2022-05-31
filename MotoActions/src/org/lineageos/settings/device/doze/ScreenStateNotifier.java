@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.doze;
+package org.pixelexperience.settings.device.doze;
 
 public interface ScreenStateNotifier {
     void screenTurnedOn();

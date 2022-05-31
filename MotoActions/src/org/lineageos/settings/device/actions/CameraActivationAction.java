@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
+package org.pixelexperience.settings.device.actions;
 
 import android.app.KeyguardManager;
 import android.content.ComponentName;
@@ -30,7 +30,7 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.MediaStore;
 
-import org.lineageos.settings.device.SensorAction;
+import org.pixelexperience.settings.device.SensorAction;
 
 import java.util.List;
 

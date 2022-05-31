@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
+package org.pixelexperience.settings.device.actions;
 
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
@@ -24,7 +24,7 @@ import android.hardware.camera2.CameraManager;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 
-import org.lineageos.settings.device.SensorAction;
+import org.pixelexperience.settings.device.SensorAction;
 
 public class TorchAction implements SensorAction {
     private static boolean mTorchEnabled;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device.actions;
+package org.pixelexperience.settings.device.actions;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -23,8 +23,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.MotoActionsSettings;
-import org.lineageos.settings.device.SensorHelper;
+import org.pixelexperience.settings.device.MotoActionsSettings;
+import org.pixelexperience.settings.device.SensorHelper;
 
 public class CameraActivationSensor implements SensorEventListener, UpdatedStateNotifier {
     private static final String TAG = "MotoActions-CameraSensor";

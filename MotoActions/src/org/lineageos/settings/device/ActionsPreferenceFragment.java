@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.pixelexperience.settings.device;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,7 +23,7 @@ import android.view.MenuItem;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
-import org.lineageos.settings.device.actions.CameraActivationSensor;
+import org.pixelexperience.settings.device.actions.CameraActivationSensor;
 
 public class ActionsPreferenceFragment extends PreferenceFragment {
 

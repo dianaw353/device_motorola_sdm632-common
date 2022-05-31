@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.pixelexperience.settings.device;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -26,16 +26,16 @@ import android.os.IBinder;
 import android.os.PowerManager;
 import android.util.Log;
 
-import org.lineageos.settings.device.actions.CameraActivationSensor;
-import org.lineageos.settings.device.actions.ChopChopSensor;
-import org.lineageos.settings.device.actions.FlipToMute;
-import org.lineageos.settings.device.actions.LiftToSilence;
-import org.lineageos.settings.device.actions.ProximitySilencer;
-import org.lineageos.settings.device.actions.UpdatedStateNotifier;
-import org.lineageos.settings.device.doze.DozePulseAction;
-import org.lineageos.settings.device.doze.FlatUpSensor;
-import org.lineageos.settings.device.doze.ScreenStateNotifier;
-import org.lineageos.settings.device.doze.StowSensor;
+import org.pixelexperience.settings.device.actions.CameraActivationSensor;
+import org.pixelexperience.settings.device.actions.ChopChopSensor;
+import org.pixelexperience.settings.device.actions.FlipToMute;
+import org.pixelexperience.settings.device.actions.LiftToSilence;
+import org.pixelexperience.settings.device.actions.ProximitySilencer;
+import org.pixelexperience.settings.device.actions.UpdatedStateNotifier;
+import org.pixelexperience.settings.device.doze.DozePulseAction;
+import org.pixelexperience.settings.device.doze.FlatUpSensor;
+import org.pixelexperience.settings.device.doze.ScreenStateNotifier;
+import org.pixelexperience.settings.device.doze.StowSensor;
 
 import java.util.LinkedList;
 import java.util.List;
