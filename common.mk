@@ -24,9 +24,6 @@
 
 $(call inherit-product, vendor/motorola/sdm632-common/sdm632-common-vendor.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -37,6 +34,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
+
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
 
 # A/B updater
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -67,20 +67,24 @@ OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl:32 \
+    android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.service \
-    android.hardware.audio.effect@5.0-impl:32 \
-    audio.a2dp.default \
+    android.hardware.audio.effect@6.0-impl:32 \
+    android.hardware.soundtrigger@2.2-impl \
+    audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
     libaacwrapper \
     libaudio-resampler \
+    libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
@@ -99,7 +103,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
-    android.hardware.bluetooth.audio@2.1-impl:32 \
+    android.hardware.bluetooth.audio-impl:32 \
+    android.hardware.bluetooth.audio@2.2 \
     libbt-vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
@@ -113,19 +118,19 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.device@1.0:64 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.camera.device@3.5 \
+    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
     camera.device@3.2-impl:32 \
     libbson.vendor \
     libxml2 \
+    Snap \
     Camera2
 
-PRODUCT_PACKAGES += \
-    CamX
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
@@ -264,9 +269,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.msm8953
 
-# MotoActions
+# Light
 PRODUCT_PACKAGES += \
-    MotoActions
+    android.hardware.light@2.0
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -323,9 +328,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
-    frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Protobuf
@@ -342,6 +345,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -432,6 +436,7 @@ USE_DEX2OAT_DEBUG := false
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
+# DEX
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
@@ -447,6 +452,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
 
 # Thermal
 PRODUCT_PACKAGES += \

@@ -88,9 +88,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_scaler=0 \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=196610 \
-    ro.vendor.display.cabl=0 \
-    ro.hardware.egl=adreno \
-    ro.hardware.vulkan=msm8953
+    ro.vendor.display.cabl=0
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -103,10 +101,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true
-
-# OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1
 
 # OMX
 # Rank OMX SW codecs lower than OMX HW codecs
@@ -133,7 +127,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
-    persist.vendor.radio.mt_sms_ack=30 \
     persist.dbg.wfc_avail_ovr=1 \
     persist.vendor.radio.no_wait_for_card=1 \
     persist.vendor.radio.dfr_mode_set=1 \
@@ -188,7 +181,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.vt.enableadb=1 \
     persist.vendor.ims.disableQXDMLogs=1 \
     persist.vendor.qti.telephony.vt_cam_interface=2 \
-    ro.vendor.build.vendorprefix=/vendor
+    ro.vendor.build.vendorprefix=/vendor \
+    ro.telephony.bypass.signalstrenthreporting=true
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.radio.aosp_usr_pref_sel=true \
@@ -197,11 +191,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
     ril.subscription.types=RUIM \
     telephony.lteOnCdmaDevice=1
-
-# Skia
-# (b/183612348): Enable skia reduceOpsTaskSplitting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    renderthread.skia.reduceopstasksplitting=true
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -219,10 +208,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Voice assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
-
-# Watchdog
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hw_timeout_multiplier=3
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \

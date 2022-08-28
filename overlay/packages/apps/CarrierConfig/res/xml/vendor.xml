@@ -447,6 +447,11 @@
         <boolean name="force_imei_bool" value="true"/>
         <boolean name="show_iccid_in_sim_status_bool" value="true"/>
         <boolean name="editable_wfc_mode_bool" value="true"/>
+        <int-array name="cdma_enhanced_roaming_indicator_for_home_network_int_array" num="3">
+             <item value="64"/>
+             <item value="65"/>
+             <item value="66"/>
+        </int-array>
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="gps.persist_lpp_mode_bool" value="false"/>
@@ -502,6 +507,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="090">
@@ -540,6 +566,20 @@
         <boolean name="carrier_settings_enable_bool" value="false"/>
         <boolean name="show_iccid_in_sim_status_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-121"/>
+            <item value="-115"/>
+            <item value="-109"/>
+            <item value="-101"/>
+        </int-array>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-113"/>
+            <item value="-113"/>
+            <item value="-109"/>
+            <item value="-101"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="rtt_downgrade_supported_bool" value="true"/>
     </carrier_config>
@@ -584,6 +624,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -597,6 +651,18 @@
     <carrier_config mcc="310" mnc="160" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="170">
         <int name="recipientLimit" value="20"/>
@@ -637,6 +703,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="200">
@@ -680,6 +767,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -693,6 +794,18 @@
     <carrier_config mcc="310" mnc="200" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="210">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -734,6 +847,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -747,6 +874,18 @@
     <carrier_config mcc="310" mnc="210" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="220">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -788,6 +927,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -801,6 +954,18 @@
     <carrier_config mcc="310" mnc="220" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="230">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -840,6 +1005,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -853,6 +1032,18 @@
     <carrier_config mcc="310" mnc="230" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="240">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -895,6 +1086,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -908,6 +1113,18 @@
     <carrier_config mcc="310" mnc="240" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="270">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -950,6 +1167,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -963,6 +1194,18 @@
     <carrier_config mcc="310" mnc="270" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="280">
         <int name="recipientLimit" value="20"/>
@@ -1003,6 +1246,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="250">
@@ -1046,6 +1310,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1059,6 +1337,18 @@
     <carrier_config mcc="310" mnc="250" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="260">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -1098,6 +1388,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1149,6 +1453,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1162,6 +1480,18 @@
     <carrier_config mcc="310" mnc="310" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="380">
         <int name="recipientLimit" value="20"/>
@@ -1202,6 +1532,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="410">
@@ -1243,6 +1594,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="490">
@@ -1286,6 +1658,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1299,6 +1685,18 @@
     <carrier_config mcc="310" mnc="490" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="560">
         <int name="recipientLimit" value="20"/>
@@ -1339,6 +1737,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="310" mnc="660">
@@ -1379,6 +1798,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1392,6 +1825,18 @@
     <carrier_config mcc="310" mnc="660" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="800">
         <boolean name="editable_voicemail_number_setting_bool" value="false"/>
@@ -1434,6 +1879,20 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-119"/>
+            <item value="-114"/>
+            <item value="-109"/>
+            <item value="-99"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -1447,6 +1906,18 @@
     <carrier_config mcc="310" mnc="800" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="310" mnc="950">
         <int name="recipientLimit" value="20"/>
@@ -1487,6 +1958,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="311" mnc="180">
@@ -1528,6 +2020,27 @@
         <boolean name="display_hd_audio_property_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
         <string name="wcdma_default_signal_strength_measurement_string">rscp</string>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-88"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="wcdma_rscp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-105"/>
+            <item value="-99"/>
+            <item value="-89"/>
+            <item value="-79"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-118"/>
+            <item value="-112"/>
+            <item value="-106"/>
+            <item value="-100"/>
+        </int-array>
         <boolean name="carrier_supports_ss_over_ut_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="311" mnc="480">
@@ -1564,6 +2077,25 @@
         <boolean name="carrier_promote_wfc_on_call_fail_bool" value="false"/>
         <string-array name="filtered_cnap_names_string_array" num="0">
         </string-array>
+        <int-array name="cdma_enhanced_roaming_indicator_for_home_network_int_array" num="3">
+             <item value="64"/>
+             <item value="65"/>
+             <item value="66"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-115"/>
+            <item value="-105"/>
+            <item value="-95"/>
+            <item value="-85"/>
+        </int-array>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-93"/>
+            <item value="-85"/>
+        </int-array>
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1599,11 +2131,37 @@
         <boolean name="carrier_settings_enable_bool" value="false"/>
         <boolean name="show_iccid_in_sim_status_bool" value="true"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true"/>
+        <int-array name="lte_rsrp_thresholds_int_array" num="5">
+            <item value="-999"/>
+            <item value="-121"/>
+            <item value="-115"/>
+            <item value="-109"/>
+            <item value="-101"/>
+        </int-array>
+        <int-array name="gsm_rssi_thresholds_int_array" num="5">
+            <item value="-113"/>
+            <item value="-113"/>
+            <item value="-113"/>
+            <item value="-109"/>
+            <item value="-101"/>
+        </int-array>
         <boolean name="rtt_downgrade_supported_bool" value="true"/>
     </carrier_config>
     <carrier_config mcc="312" mnc="530" imsi="^31026097.*">
         <boolean name="carrier_vt_available_bool" value="false"/>
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="false"/>
+        <int-array name="gsm_rssi_thresholds_int_array" num="4">
+            <item value="-107"/>
+            <item value="-103"/>
+            <item value="-97"/>
+            <item value="-89"/>
+        </int-array>
+        <int-array name="lte_rsrp_thresholds_int_array" num="4">
+            <item value="-128"/>
+            <item value="-118"/>
+            <item value="-108"/>
+            <item value="-98"/>
+        </int-array>
     </carrier_config>
     <carrier_config mcc="334">
         <int name="maxImageHeight" value="1944" />
