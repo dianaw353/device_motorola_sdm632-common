@@ -1,3 +1,9 @@
+<!--
+    Copyright (C) 2022 Botan Yuukan. All rights reserved.
+
+    SPDX-License-Identifier: GPL-2.0-only
+-->
+
 <manifest version="1.0" type="device" target-level="3">
     <hal format="hidl">
         <name>android.hardware.audio</name>
