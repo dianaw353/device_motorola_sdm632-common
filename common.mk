@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Copyright (C) 2022 Botan Yuukan
+
+# SPDX-License-Identifier: GPL-2.0-only
 
 #
 # This file sets variables that control the way modules are built
